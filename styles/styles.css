@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+/*font-family: 'Poppins', sans-serif;*/
+@font-face {
+    font-family: caviarDreams;
+    src: url(../fonts/CaviarDreams.ttf);
+}
+
+@font-face {
+    font-family: arual;
+    src: url(../fonts/Arual.ttf);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #F8F6F1;
+}
+
+.navbar {
+    background-color: #F7A173;
+    border: 20px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-family: arual;
+}
+
+.nav-link {
+    color: black !important;
+    font-family: caviarDreams;
+    font-size: 24px;
+}
+
+.nav-link:hover {
+    transform: scale(1, 02);
+    text-shadow: 0 0 5px black;
+}
+
+.navbar-toggler:hover {
+    transform: scale(1, 09);
+
+}
+
+.h2 {
+    text-align: center;
+    background-color: #10A5B2;
+    font-family: poppins;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+/*Footer*/
+footer {
+    background-color: #B7E3FA;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-family: poppins;
+}
+
+footer a {
+    color: #10A5B2;
+    font-size: 30px;
+    letter-spacing: 15px;
+}
+
+
+/*Productos*/
+.productos{
+    text-align: center;
+    font-family: arual;
+    font-size: 30px;
+}
+.card{
+    padding: 20px;
+}
+.card-title{
+    color: #000;
+    font-family: poppins;
+}
+.card-text{
+    color: #000;
+    font-size: 18px;
+    font-family: caviarDreams;
+}
+
+
+/*Contacto*/
+.titulo{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: arual;
+    font-size: 50px;
+}
+.contacto{
+    background-color: #B7E3FA;
+    text-align: center;
+    font-family: poppins;
+    font-size: 32px;
+}
+.row{
+    padding: 50px;
+    margin-left: 50px;
+}
+.col p{
+    text-align: left ;
+    font-family: poppins;
+    font-size: 24px;
+}
+.h3-form{
+    text-align: center;
+    font-family: caviarDreams;
+    font-family: 18px;
+    padding: 20px;
+}
+
+form{
+    background-color: #EDDFA6;
+    color: black;
+    border-radius: 5px;
+    width: 30px;
+    width: 350px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 12px;
+    font-family: poppins;
+}
+
+/*Somos*/
+.nosotros{
+    width: 100%;
+    min-height: 350px;
+    background-color: #EDDFA6;
+}
+.nleft{
+    height: 550px;
+    width: 100%;
+    background-image: url(../multimedia-2/Somos/eco2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.nright{
+    width: 100%;
+    padding: 20px;
+}
+.nright h3{
+    color: #fff;
+    text-shadow: 0 0 5px #000,  0 0 5px #000;
+    font-family: caviarDreams;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.nright p{
+    font-size: 26px;
+    font-family: poppins;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.nright a{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+}
+.nright a:hover{
+    background-color: purple;
+}
+
+/*Blog*/
+
+.galeria {
+    width: 100%;
+    background-color: #EDDFA6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px;
+}
+
+.galeria h1 {
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: arual;
+    color: #10A5B2;
+}
+
+.galeria p {
+    font-size: 24px;
+    text-align: center;
+    font-family: poppins;
+    padding: 25px;
+}
+
+.contenedor {
+    width: 90%;
+    height: auto;
+    display: grid;
+}
+
+.item {
+    min-height: 200px;
+    min-width: 200px;
+    border: 2px solid #fff;
+}
+
+.item:hover {
+    transform: scale(1.2);
+    transition: 0.7s;
+}
+
+.item1 {
+    grid-row: 1/3;
+    grid-column: 1/2;
+
+    background-image: url(../multimedia-2/Blog/1-img.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item2 {
+    grid-area: "item2";
+    background-image: url(../multimedia-2/Blog/2-img.jpg);
+    background-size: cover;
+}
+
+.item3 {
+    grid-area: "item3";
+    grid-column: 3/5;
+    background-image: url(../multimedia-2/Blog/3-img.jpg);
+    background-size: cover;
+}
+
+.item4 {
+    grid-area: "item4";
+    grid-row: 2/4;
+    background-image: url(../multimedia-2/Blog/4-img.jpg);
+    background-size: cover;
+}
+
+.item5 {
+    grid-area: "item5";
+    background-image: url(../multimedia-2/Blog/5-img.jpg);
+    background-size: cover;
+}
+
+.item6 {
+    grid-area: "item6";
+    background-image: url(../multimedia-2/Blog/6-img.jpg);
+    background-size: cover;
+}
+
+.item7 {
+    grid-area: "item7";
+    background-image: url(../multimedia-2/Blog/7-img.jpg);
+    background-size: cover;
+}
+
+.item8 {
+    grid-area: "item8";
+    grid-column: 3/5;
+    background-image: url(../multimedia-2/Blog/8-img.jpg);
+    background-size: cover;
+}
+
+
+
+/*somos*/
+
+
+@media only screen and (min-width:480px) {
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 200px);
+    }
+    .nosotros{
+        display: flex;
+    }
+    .nleft{
+        width: 50%;
+    }
+    .nright{
+        width: 50%;
+    }
+}
+
+
+
+

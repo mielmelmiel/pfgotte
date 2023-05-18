@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+/*font-family: 'Poppins', sans-serif;*/
+@font-face {
+    font-family: caviarDreams;
+    src: url(../fonts/CaviarDreams.ttf);
+}
+@font-face{
+    font-family: arual;
+    src: url(../fonts/Arual.ttf);
+}
+
+$font1: 'arual';
+$font2: 'caviarDreams';
+$font3: 'Poppins';
+$font4: 'sans-serif';
+
+//paleta de colores
+$color1: #F8F6F1;
+$color2: #EDDFA6;
+$color3: #F7A173;
+$color4: #B7E3FA;
+$color5: #10A5B2;
+$color6: #fff;
+$color7: #000;
+
+$alto: 140px;
+
+$size1: 12px;
+$size2: 18px;
+$size3: 24px;
+$size4: 26px;
+$size5: 30px;
+$size6: 32px;
+$size7: 34px;
+$size8: 50px;
+
+/*mixin*/
+@mixin h2($color7, $font2, $size7){
+    color: $color7;
+    text-shadow: 0 0 5px $color7, 0 0 5px $color7;
+    font-family: $font2;
+    font-size: $size7;
+}
+@mixin titulo( $font1, $size5, $color7){
+    font-family: $font1;
+    font-size: $size5;
+    color: $color7;
+    text-align: center;
+    text-transform: uppercase;
+}
+@mixin card($color7, $size2, $font2){
+    color: $color7;
+    font-size: $size2;
+    font-family: $font2;
+}
+@mixin p($color7, $font3, $size3){
+    color: $color7;
+    font-size: $size3;
+    font-family: $font3;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F8F6F1;
+}
+
+.navbar {
+    background-color: #F7A173;
+    border: 20px;
+    .navbar-brand {
+        font-weight: bold;
+        font-family: $font1;
+    }
+    .nav-link {
+        color: black !important;
+        font-family: $font2;
+        font-size: $size3;
+    }
+    .nav-link:hover {
+        transform: scale(1, 02);
+        text-shadow: 0 0 5px black;
+    }
+    .navbar-toggler:hover {
+        transform: scale(1, 09);
+    
+    }
+}
+
+
+.h2 {
+    @include h2;
+    text-align: center;
+    background-color: #10A5B2;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+/*Footer*/
+footer {
+    background-color: $color4;
+    color: $color7;
+    text-align: center;
+    padding: 20px;
+    p {
+        margin-bottom: 20px;
+        font-size: $size3;
+        font-family: $font3;
+    }
+    a {
+        color: $color5;
+        font-size: $size5;
+        letter-spacing: 15px;
+    }
+}
+
+/*Productos*/
+.productos {
+    text-align: center;
+    @include titulo;
+}
+
+.card {
+    padding: 20px;
+    .card-title {
+        color: $color7;
+        font-family: $font3;
+    }
+    .card-text {
+        @include card;
+    }
+}
+
+/*Contacto*/
+.titulo {
+    @include titulo;
+}
+
+.contacto{
+    background-color: #B7E3FA;
+    text-align: center;
+    @include h2;
+}
+
+.row {
+    padding: 50px;
+    margin-left: 50px;
+}
+
+.col p {
+    text-align: left;
+    @include p;
+}
+
+.h3-form {
+    text-align: center;
+    @include card;
+    padding: 20px;
+}
+
+form {
+    background-color: #EDDFA6;
+    color: black;
+    border-radius: 5px;
+    width: calc($alto*4);
+    height: calc($alto*2);
+    margin: 0 auto;
+    padding: 10px;
+    font-size: $size1;
+    font-family: $font3;
+}
+
+/*Somos*/
+.nosotros {
+    width: 100%;
+    min-height: 350px;
+    background-color: #EDDFA6;
+}
+
+.nleft {
+    height: 550px;
+    width: 100%;
+    background-image: url(../multimedia-2/Somos/eco2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.nright {
+    width: 100%;
+    padding: 20px;
+    .nright h3 {
+        color: $color6;
+        text-shadow: 0 0 5px #000, 0 0 5px #000;
+        font-family: $font2;
+        font-size: $size7;
+        margin-bottom: 20px;
+    }
+    .nright p {
+        @include p;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    .nright a {
+        background-color: #333;
+        color: $color6;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: $font4;
+    }
+    .nright a:hover {
+        background-color: purple;
+    }
+}
+
+/*Blog*/
+
+#galeria {
+    .subtitulo{
+        @include h2;
+    }
+    .col-lg-4{
+        margin: 0 !important;
+        padding: 20px;
+    }
+    img{
+        width: 100%;
+        height: 250px;
+    
+    }
+    img:hover{
+        border: 0 0 5px solid $color5;
+        border-radius: 5px;
+        border: 5px solid $color5;
+        transform: rotate(-3deg) scale(1.15);
+    }
+}
+
+
+/*somos*/
+
+@media only screen and (min-width:480px) {
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 200px);
+    }
+
+    .nosotros {
+        display: flex;
+    }
+
+    .nleft {
+        width: 50%;
+    }
+
+    .nright {
+        width: 50%;
+    }
+}
+
